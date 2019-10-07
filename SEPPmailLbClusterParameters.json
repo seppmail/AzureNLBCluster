@@ -1,0 +1,63 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "adminUsername": {
+        "value": "ThereIsNoShellAccess"
+      },
+      "adminPasswordOrKey": {
+        "value": "Th3r1sN0$hell@ccesS"
+      },
+      "lbDnsLabelPrefix": {
+        "value": "seppmaillb"
+      },
+      "node1DnsLabelPrefix": {
+        "value": "seppmailnode1"
+      },
+      "node2DnsLabelPrefix": {
+        "value": "seppmailnode2"
+      },
+      "storageAccountName": {
+        "value": "saseppmail"
+      },
+      "vmNodeName": {
+        "value": "SEPPmailNode"
+      },
+      "vmSize": {
+        "value": "Standard_D2"
+      },
+      "virtualNetworkName": {
+        "value": "SEPPmailVNET"
+      },
+      "subNetName": {
+        "value": "SEPPmailSubnet"
+      },
+      "addressPrefix": {
+        "value": "192.168.100.0/24"
+      },
+      "subNetPrefix": {
+        "value": "192.168.100.0/25"
+      },
+      "node1NicName": {
+        "value": "SEPPmailNic1"
+      },
+      "node2NicName": {
+        "value": "SEPPmailNic2"
+      },
+      "lbPublicIpName": {
+        "value": "SEPPmailNlbPublicIP"
+      },
+      "node1PublicIpName": {
+        "value": "SEPPmailNode1PublicIP"
+      },
+      "node2PublicIpName": {
+        "value": "SEPPmailNode2PublicIP"
+      },
+      "NSGName": {
+        "value": "SEPPmailLbNSG"
+      },
+      "lbName": {
+        "value": "SEPPmailLb"
+      }
+    }
+  }
