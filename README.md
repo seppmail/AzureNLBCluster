@@ -5,7 +5,7 @@ Azure Network Load Balancer. The virtual machines are created with the SEPPmail 
 
 As of today (early October 2019) we use the 'smvm11' image which represents SEPPmail Version 11.0.5.
 Please see the schema graphic for a representation of the technical schema.
-![NLB Cluster Schema] (https://github.com/seppmail/AzureNLBCluster/SEPPmailLbCluster.png)
+![NLB Cluster Schema](SEPPmailLbCluster.png)
 
 ## Files
 
