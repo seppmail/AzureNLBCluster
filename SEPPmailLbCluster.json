@@ -59,10 +59,10 @@
     },
     "SEPPmailOSVersion": {
       "type": "string",
-      "defaultValue": "smvm11",
+      "defaultValue": "smvm12",
       "allowedValues": [
         "freedeploy",
-        "smvm11"
+        "smvm12"
       ],
       "metadata": {
         "description": "The SEPPmail version for the VM. This will pick a fully patched image of this given SEPPmail version."
