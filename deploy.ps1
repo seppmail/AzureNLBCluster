@@ -1,4 +1,4 @@
-# Copyright (c) 2019 SEPPmail AG
+# Copyright (c) 2021 SEPPmail AG
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -29,5 +29,11 @@ $rgName = 'seppmail-nlb'
 # Create resource group
 New-AzResourceGroup -Location $location -ResourceGroupName $rgName
 
-# Create CLuser
-New-AzResourceGroupDeployment -ResourceGroupName $rgName -TemplateFile .\SEPPmailLBCluster.json -TemplateParameterFile .\SEPPmailLbClusterParameters.json -verbose
+# Create Cluser
+$AzResourceGroupDeploymentHt = @{
+    ResourceGroupName = $rgName
+    TemplateFile = '.\SEPPmailLBCluster.json'
+    TemplateParameterFile = '.\SEPPmailLbClusterParameters.json'
+}
+
+New-AzResourceGroupDeployment @AzResourceGroupDeploymentHt -verbose
