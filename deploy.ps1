@@ -23,8 +23,11 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Example location and resource group, change this as needed
-$location = 'westeurope'
+$location = 'germanywestcentral'
 $rgName = 'seppmail-nlb'
+
+# Test if required modules are available
+if (!(Get-Module az.resources -Listavailable)) {Write-Error 'Module Az.Resources missing, the deployment will not work. run Install-Module az.resources'}
 
 # Create resource group
 New-AzResourceGroup -Location $location -ResourceGroupName $rgName
@@ -32,7 +35,7 @@ New-AzResourceGroup -Location $location -ResourceGroupName $rgName
 # Create Cluser
 $AzResourceGroupDeploymentHt = @{
     ResourceGroupName = $rgName
-    TemplateFile = '.\SEPPmailLBCluster.json'
+    TemplateFile = '.\SEPPmailLbCluster.json'
     TemplateParameterFile = '.\SEPPmailLbClusterParameters.json'
 }
 
